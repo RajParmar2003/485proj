@@ -1,0 +1,38 @@
+.app {
+    font-family: Arial, sans-serif;
+  }
+  
+  .app h1 {
+    margin: 0;
+  }
+  
+  .app p {
+    margin: 0;
+  }
+  
+  .app button {
+    cursor: pointer;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
