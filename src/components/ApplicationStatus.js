@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
+// src/components/ApplicationStatus.js
+
+import React, { useState, useEffect } from 'react';
 
 const ApplicationStatus = ({ application, onStatusChange }) => {
   const [status, setStatus] = useState(application.status || 'pending');
+
+  useEffect(() => {
+    setStatus(application.status || 'pending');
+  }, [application.status]);
 
   const handleChange = (event) => {
     const newStatus = event.target.value;
@@ -17,10 +23,10 @@ const ApplicationStatus = ({ application, onStatusChange }) => {
         value={status}
         onChange={handleChange}
       >
-        <option value="pending">Pending</option>
-        <option value="accepted">Accepted</option>
-        <option value="declined">Declined</option>
         <option value="no_word_back">No Word Back</option>
+        <option value="pending">Pending</option>
+        <option value="declined">Declined</option>
+        <option value="accepted">Accepted</option>
       </select>
     </div>
   );
