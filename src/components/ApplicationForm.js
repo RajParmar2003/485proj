@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ApplicationForm.css';
+import '../css/ApplicationForm.css';
 
 const ApplicationForm = ({ onAdd }) => {
   const [company, setCompany] = useState('');

@@ -1,0 +1,65 @@
+.application-list {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.application-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.application-list li {
+  background-color: #e8f5e9;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #c8e6c9;
+  border-radius: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.application-list li:hover {
+  background-color: #d0e9d2;
+}
+
+.application-list li div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.application-list li strong {
+  color: #388e3c;
+  display: inline-block;
+  width: 100px;
+}
+
+.application-list li label {
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.application-list li .application-details {
+  flex: 3;
+}
+
+.application-list li .application-status {
+  min-width: 150px;
+  text-align: right;
+  flex: 1;
+}
+
+.application-list li .application-details label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.application-list li .application-details span {
+  color: #333;
+}

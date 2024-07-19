@@ -1,6 +1,5 @@
-// src/components/ApplicationStatus.js
-
 import React, { useState, useEffect } from 'react';
+
 
 const ApplicationStatus = ({ application, onStatusChange }) => {
   const [status, setStatus] = useState(application.status || 'pending');

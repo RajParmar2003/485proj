@@ -1,0 +1,12 @@
+.view-applications label {
+  margin-right: 10px;
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.view-applications select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}

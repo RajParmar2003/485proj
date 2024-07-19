@@ -1,0 +1,18 @@
+.application-status {
+    display: flex;
+    align-items: center;
+  }
+  
+  .application-status label {
+    margin-right: 10px;
+    color: #388e3c;
+    font-weight: bold;
+  }
+  
+  .application-status select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
