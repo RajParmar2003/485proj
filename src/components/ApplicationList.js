@@ -1,7 +1,5 @@
-// src/components/ApplicationList.js
-
 import React from 'react';
-import './ApplicationList.css';
+import '../css/ApplicationList.css'; 
 import ApplicationStatus from './ApplicationStatus';
 
 const ApplicationList = ({ applications, onStatusChange }) => {
@@ -13,7 +11,17 @@ const ApplicationList = ({ applications, onStatusChange }) => {
         <ul>
           {applications.map((app) => (
             <li key={app.id}>
-              <strong>Company:</strong> {app.company} | <strong>Position:</strong> {app.position} | <strong>Deadline:</strong> {app.deadline}
+              <div className="application-details">
+                <label>
+                  <strong>Company:</strong> <span>{app.company}</span>
+                </label>
+                <label>
+                  <strong>Position:</strong> <span>{app.position}</span>
+                </label>
+                <label>
+                  <strong>Deadline:</strong> <span>{app.deadline}</span>
+                </label>
+              </div>
               <ApplicationStatus application={app} onStatusChange={onStatusChange} />
             </li>
           ))}

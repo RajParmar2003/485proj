@@ -1,9 +1,8 @@
-// src/pages/ViewApplications.js
-
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
+import Header from '../components/Header'; 
 import Footer from '../components/Footer';
 import ApplicationList from '../components/ApplicationList';
+import '../css/ViewApplications.css';
 
 const ViewApplications = ({ applications }) => {
   const [appList, setAppList] = useState(applications.map(app => ({ ...app, status: app.status || 'pending' })));
@@ -36,7 +35,7 @@ const ViewApplications = ({ applications }) => {
   };
 
   return (
-    <div>
+    <div className="view-applications">
       <Header />
       <div>
         <label htmlFor="filter">Filter by status: </label>
