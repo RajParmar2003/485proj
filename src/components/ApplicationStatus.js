@@ -1,8 +1,11 @@
+// src/components/ApplicationStatus.js
 import React, { useState, useEffect } from 'react';
 
-
 const ApplicationStatus = ({ application, onStatusChange }) => {
-  const [status, setStatus] = useState(application.status || 'pending');
+  const [status, setStatus] = useState(() => {
+    const savedStatus = localStorage.getItem(`status-${application.id}`);
+    return savedStatus ? savedStatus : application.status || 'pending';
+  });
 
   useEffect(() => {
     setStatus(application.status || 'pending');
@@ -11,6 +14,7 @@ const ApplicationStatus = ({ application, onStatusChange }) => {
   const handleChange = (event) => {
     const newStatus = event.target.value;
     setStatus(newStatus);
+    localStorage.setItem(`status-${application.id}`, newStatus);
     onStatusChange(application.id, newStatus);
   };
 
