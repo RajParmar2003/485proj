@@ -1,3 +1,4 @@
+// src/pages/AddApplication.js
 import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -6,7 +7,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const AddApplication = ({ onAdd }) => {
   const handleAddApplication = (application) => {
-    onAdd({ ...application, id: uuidv4(), status: 'pending' });
+    const date = new Date().toISOString();
+    onAdd({ ...application, id: uuidv4(), status: 'pending', date });
   };
 
   return (

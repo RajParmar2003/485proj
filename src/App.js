@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AddApplication from './pages/AddApplication';
 import ViewApplications from './pages/ViewApplications';
+import AnalyticsPage from './pages/AnalyticsPage';
 import LoginPage from './components/LoginPage';
 import LogoutButton from './components/LogoutButton';
 import PrivateRoute from './components/PrivateRoute';
@@ -26,6 +27,7 @@ const App = () => {
           <ul>
             <li><Link to="/">Add Application</Link></li>
             <li><Link to="/view">View Applications</Link></li>
+            <li><Link to="/analytics">Analytics</Link></li>
             {!isAuthenticated ? <li><Link to="/login">Log In</Link></li> : <li><LogoutButton /></li>}
           </ul>
         </nav>
@@ -34,6 +36,7 @@ const App = () => {
           <Route path="/logout" element={<LogoutButton />} />
           <Route path="/" element={<PrivateRoute component={AddApplication} onAdd={addApplication} />} />
           <Route path="/view" element={<PrivateRoute component={ViewApplications} applications={applications} />} />
+          <Route path="/analytics" element={<PrivateRoute component={AnalyticsPage} applications={applications} />} />
         </Routes>
       </div>
     </Router>
